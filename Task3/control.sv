@@ -11,23 +11,21 @@ module control(
 
 always_comb begin
 
-    case(instr_opcode)
-        7'b0010011: begin ALUctrl = 3'b000;
+    if(instr_opcode==7'b0010011) begin
+        ALUctrl = 3'b000;
                           RegWrite = 1;
                           ALUsrc = 1;
                           ImmSrc = 1;
                           PCsrc = 0;
-        end 
-
-    
-        7'b1100011: begin ALUctrl = 3'b111;
+    end
+    else if (instr_opcode==7'b1100011) begin
+        ALUctrl = 3'b111;
                           RegWrite = 0;
                           ALUsrc = 0;
                           ImmSrc = 0;
                           PCsrc = 1;
-        end
-
-    endcase
+    end
+    
     
 end
     
