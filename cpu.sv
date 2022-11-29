@@ -18,6 +18,10 @@ logic [31:0] ImmOp;
 logic [31:0] PC;
 logic       EQ;
 
+assign rs1 = instr[19:15];
+assign rs2 = instr[24:20];
+assign rd = instr[11:7];
+
 pc pc(
     .ImmOp(ImmOp),
     .clk(clk),
