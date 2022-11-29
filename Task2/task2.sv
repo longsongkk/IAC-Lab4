@@ -1,4 +1,4 @@
-module task3 #(
+module task2 #(
     input logic             clk,
     input logic [4:0]       AD1,
     input logic [4:0]       AD2,
