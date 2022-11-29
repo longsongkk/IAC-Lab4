@@ -1,4 +1,4 @@
-module Sign-extension(
+module Sign-extension #(
     input logic [11:0]        Imm_br,
     input logic [11:0]       Imm_imm,
     input logic              Immsrc,
@@ -13,4 +13,5 @@ always_comb begin
 
     Immop={20{Imm[11],Imm[11:0]}};
 end
+
 endmoule
